@@ -1,7 +1,23 @@
 "use strict";
 
-if (4562343 == 4562341) {
-    console.log('Ok!');
-} else {
-    console.log('Nooooo!!!!!!!');
-} 
+let num = 50;
+
+// while (num <= 55) {
+//     console.log(num);
+//     num++;
+// }
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+// while (num <= 55);
+
+for (let i = 1; i < 10; i++) {
+    if(i === 6) {
+        // break;
+        continue;
+    }
+
+    console.log(i);
+}
