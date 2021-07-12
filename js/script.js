@@ -1,67 +1,24 @@
 "use strict";
 
-let numberOfMovies;
-
-function start() {
-    numberOfMovies = +prompt("Сколько фильмов вы уже просмотрели?", "");
-
-    while (numberOfMovies == '' || numberOfMovies == null || isNaN(numberOfMovies)) {
-        numberOfMovies = +prompt("Сколько фильмов вы уже просмотрели?", "");
-    }
+function first() {
+    // Do something
+    setTimeout(function() {
+        console.log(1);
+    }, 500);
 }
 
-start();
-
-const personalMovieDB = {
-    count: numberOfMovies,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-
-function rememberMyFilms() {
-    for (let i = 0; i < 2; i++) {
-        const a = prompt('Один из последних просмотренных фильмов?', ''),
-          b = prompt('Насколько оцените его?');
-          if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-            personalMovieDB.movies[a] = b;
-            console.log('Продолжайте в том же духе');
-            }
-            else {
-                console.log('Error');
-                i--;
-        }
-    }
+function second() {
+    console.log(2);
 }
 
-rememberMyFilms();
+first();
+second();
 
-
-function detectPersonalLevel() {
-    if (personalMovieDB.count < 10) {
-        alert('Просмотрено маловато фильмов');
-    } else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
-            alert('Вы классический зритель');
-        } else if (personalMovieDB.count > 30) {
-                alert('Вы - киноман!');
-    }    
+function learnJS(lang, callback) {
+    callback();
+    console.log(`Я учу: ${lang}!`);
 }
 
-detectPersonalLevel();
-
-function showMyDb(hidden) {
-    if (!hidden) {
-        console.log(personalMovieDB);
-    }
-}
-
-showMyDb(personalMovieDB.privat);
-
-function writeYourGenres() {
-    for (let i = 1; i <= 3; i++) {
-        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`); 
-    }
-}
-
-writeYourGenres();
+learnJS('JavaScript', function() {
+    console.log('Какой язык программирования ты учишь?');
+});
