@@ -1,0 +1,20 @@
+.frame {
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+    padding: 10px;
+    max-width: 400px;
+    margin: 20px;
+}
+
+.frame-red {
+    border-color: red;
+}
+
+.frame-bold {
+    border-width: 5px;
+}
+
+.hidden {
+    display: none;
+}

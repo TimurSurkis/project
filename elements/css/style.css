@@ -1,0 +1,10 @@
+.btn {
+    width: 100px;
+    height: 40px;
+    margin-left: 45%;
+    margin-top: 20px;
+    border-radius: 0px;
+    border-width: 1px;
+    border-color: silver;
+    border-style: solid;
+}
